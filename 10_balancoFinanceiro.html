@@ -1,0 +1,25 @@
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<script>
+    //Problema: Balanço financeiro
+    // Faça um script que peça para o usuário informar as despesas relacionadas com:
+    // - Conta de água
+    // - Conta de energia elétrica
+    // - Conta de telefone
+    // - Supermercado
+    // Também peça para o usuário informar o valor que recebe de remuneração mensal (salário), proveniente da sua atuação profissional.
+    // Verifique se o usuário ganha mais do que recebe e apresente em tela, indicando quanto que sobrou após o pagamento das contas ou quanto que faltou para poder pagar todas as contas previstas.
+
+    //Entrada
+const contaAgua = Number(prompt("Informe o valor de sua conta de água:"))
+const contaEnergia = Number(prompt("Informe o valor de sua conta de luz:"))
+const contaTelefone = Number(prompt("Informe o valor de sua conta de telefone:"))
+const contaSupermercado = Number(prompt("Informe o valor de sua conta de supermercado:"))
+const salário = Number(prompt("Informe seu salário mensal:"))
+    //Processamento
+const valorSobra = salário - (contaAgua + contaEnergia + contaTelefone + contaSupermercado)
+let resultadofinal;
+(valorSobra >= 0) ? resultadofinal = `Você recebeu mais do que pagou, sobrara ${valorSobra.toFixed(2)} reais`
+: resultadofinal = `Você pagou mais do que recebeu, faltará ${valorSobra.toFixed(2)} reais`
+    //Saída
+    document.write(resultadofinal);
+</script>
